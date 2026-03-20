@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+sqlalchemy
+aiosqlite
+mediapipe
+opencv-python
+numpy
+pydantic
+pydantic-settings
+websockets
