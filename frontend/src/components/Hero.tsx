@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import SpotlightCard from '@/components/ui/SpotlightCard';
 import GlitchText from '@/components/ui/GlitchText';
 import { motion } from 'framer-motion';
-import { ArrowRight, PlayCircle, Shield, Eye, Activity, Lock, Globe, Cpu } from 'lucide-react';
+import { ArrowRight, PlayCircle, Shield, Eye, Activity, Lock, Globe, Cpu, User } from 'lucide-react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
@@ -57,6 +57,17 @@ export default function Hero() {
                     <span className="text-white font-medium border-b border-cyan-500/50 pb-0.5 mx-1">Zero latency.</span>
                     <span className="text-white font-medium border-b border-purple-500/50 pb-0.5 mx-1">100% Integrity.</span>
                 </motion.p>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 1 }}
+                    className="text-gray-500 font-mono text-sm mb-12 flex gap-4 items-center"
+                >
+                    <span className="flex items-center gap-1"><User className="w-4 h-4" /> Kaustubh Pandey (CS-23411064)</span>
+                    <span className="w-1 h-1 rounded-full bg-gray-700" />
+                    <span className="flex items-center gap-1"><User className="w-4 h-4" /> Vaibhav Raj (CS-23411072)</span>
+                </motion.div>
 
                 {/* CTA Buttons */}
                 <motion.div

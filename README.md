@@ -1,5 +1,7 @@
 # AI Proctoring System for Online Exams
 
+**Developed by: Kaustubh Pandey (CS-23411064) & Vaibhav Raj (CS-23411072)**
+
 A production-grade, multimodal AI-based online exam proctoring system featuring a futuristic UI and real-time behavioral analysis.
 
 ## 🚀 Features
@@ -40,12 +42,12 @@ A production-grade, multimodal AI-based online exam proctoring system featuring 
 3.  **Running the Project**
     - Simply double-click `start_project.bat` in the root directory.
     - OR run manually:
-      - Backend: `uvicorn backend.main:app --reload`
-      - Frontend: `npm run dev`
+      - Backend: `.\backend\venv\Scripts\python.exe -m uvicorn backend.main:app --reload --port 8001`
+      - Frontend: `cd frontend && npm run dev`
 
 4.  **Access**
     - Frontend: http://localhost:3000
-    - Backend API: http://localhost:8000/docs
+    - Backend API: http://localhost:8001/docs
 
 ## ⚠️ Troubleshooting
 

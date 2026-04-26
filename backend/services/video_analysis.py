@@ -14,12 +14,13 @@ class VideoAnalyzer:
     def __init__(self):
         self.use_mediapipe = False
         self.reference_face_signature = None
-        self.reference_name = "Tanmay"
+        self.reference_name = "Kaustubh / Vaibhav"
         self.risk_accumulator = 0
         
         if MP_AVAILABLE:
             try:
                 print("VideoAnalyzer: Initializing FaceMesh...")
+                self.mp_face_mesh = mp.solutions.face_mesh
                 self.face_mesh = self.mp_face_mesh.FaceMesh(
                     min_detection_confidence=0.5, 
                     min_tracking_confidence=0.5,
@@ -185,7 +186,7 @@ class VideoAnalyzer:
 
     def _process_opencv(self, frame):
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-        faces = self.face_cascade.detectMultiScale(gray, 1.1, 4)
+        faces = self.face_cascade.detectMultiScale(gray, 1.3, 6, minSize=(100, 100))
         
         if len(faces) == 0:
             return {"risk_score": 90, "status": "No Face Detected", "box": None, "face_id": "None"}

@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 import path from "path";
 
 const nextConfig: NextConfig = {
+  // Use webpack explicitly via CLI flag --webpack
+  // turbopack: {}, 
+
   webpack: (config) => {
     const projectRoot = process.cwd();
     const nodeModulesPath = path.resolve(projectRoot, 'node_modules');
